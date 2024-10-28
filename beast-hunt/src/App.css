@@ -1,0 +1,108 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #dadada;
+  background-color: #1a202c;
+}
+
+.game-header {
+  
+  display: flex;
+  margin: auto;
+  gap: 10px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-header h1 {
+  justify-content: flex-start;
+  
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.game-content {
+  display: flex;
+  gap: 10px 10px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.game-board {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  flex: 4;
+}
+
+.game-clock {
+    justify-content: flex-end;
+  }
+
+.game-controls {
+  display: flex;
+  margin: auto;
+  justify-content: flex-start;
+}
+
+.zombie-order {
+  margin: auto;
+  justify-content: flex-start;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Add these rules at the end of your App.css file */
+
+.game-results-table {
+  border: 1px solid white !important;
+  margin-bottom: 40px;
+
+}
+
+.results-cell {
+  border: 1px solid white !important;
+  padding: 12px 16px !important;
+  text-align: left;
+}
+
+.results-cell-number {
+  text-align: center;
+}
+
+.game-results-table th {
+  background-color: #4A5568;
+}
+
+.game-results-table tr:nth-child(even) {
+  background-color: #2D3748;
+}
+
+.game-results-table tr:nth-child(odd) {
+  background-color: #1A202C;
+}
